@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Change Every Second</title>
+  </head>
+  <body>
+    <h1 id="color-changing">hello world</h1>
+  </body>
+
+  <script>
+    const colorChanging = document.getElementById("color-changing");
+    const colors = ["red", "green", "blue", "orange", "purple","#B22222"," #D67229"," #C8A951"];
+    let currentIndex = 0;
+
+    function changeColor() {
+      colorChanging.style.color = colors[currentIndex];
+      currentIndex = (currentIndex + 1) % colors.length;
+    }
+    const intervalId = setInterval(changeColor, 100);
+  </script>
+</html>
